@@ -1,0 +1,18 @@
+/* Stylesheets for IE6 */
+.user-info .user-link .shadow, 
+img.shadow {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+article section .user-info .user-details {
+	margin-left: 50px;
+	margin-left: 56px;
+	padding-left: 0;
+}
+
+.user-info .user-link {
+	margin-right: 0;
+	padding-right: 0;
+}
