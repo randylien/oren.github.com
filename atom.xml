@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Your Website</title>
+    <link href="http://website.com/atom.xml" rel="self"/>
+    <link href="http://website.com"/>
+    <updated>2012-09-04T04:34:10.309Z</updated>
+    <id>http://website.com</id>
+    <author>
+        <name>Your Name</name>
+        <email>your@email.com</email>
+    </author>
+
+    
+        <entry>
+            <title>Driving technical change</title>
+            <link href="http://website.com//posts/driving-technical-change.html"/>
+            <updated>2012-09-04T04:31:14.000Z</updated>
+            <id>http://website.com//posts/driving-technical-change.html</id>
+            <content type="html">&lt;!DOCTYPE html&gt;
+&lt;html lange=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;!-- Meta --&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+
+    &lt;!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 --&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;
+
+    &lt;!-- Our site title and description --&gt;
+    &lt;title&gt;Driving technical change | Your Website&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;When your website appears in search results in say Google, the text here will be shown underneath your website's title.&quot; /&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website&quot; /&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;Your Name&quot; /&gt;
+
+    &lt;!-- Output DocPad produced meta elements --&gt;
+    &lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad&quot;/&gt;
+
+    &lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+
+    &lt;!-- DocPad Meta Information --&gt;
+    &lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad&quot;/&gt;
+
+
+    &lt;!-- Icons --&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;ico/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;ico/apple-touch-icon-144-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;ico/apple-touch-icon-114-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;ico/apple-touch-icon-72-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;ico/apple-touch-icon-57-precomposed.png&quot;&gt;
+
+    &lt;!-- Shims: IE6-8 support of HTML5 elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+        &lt;script async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Styles --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/vendor/twitter-bootstrap/css/bootstrap.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/vendor/twitter-bootstrap/css/bootstrap-responsive.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Markup --&gt;
+    &lt;div class=&quot;navbar navbar-fixed-top&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+                &lt;ul class=&quot;nav&quot;&gt;
+                    
+                        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/hello.html&quot; class=&quot;&quot;&gt;
+                            &lt;a href=&quot;/pages/hello.html&quot; property=&quot;dc:title&quot;&gt;This is a Page&lt;/a&gt;
+                        &lt;/li&gt;
+                    
+                        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts.html&quot; class=&quot;&quot;&gt;
+                            &lt;a href=&quot;/pages/posts.html&quot; property=&quot;dc:title&quot;&gt;Posts&lt;/a&gt;
+                        &lt;/li&gt;
+                    
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
+            &lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
+    &lt;h1&gt;Driving technical change&lt;/h1&gt;
+    &lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;This is a &lt;strong&gt;blog post!!!&lt;/strong&gt;&lt;br /&gt;wooo&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;real-time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;mmmm&lt;/h1&gt;
+
+&lt;h2&gt;mmm&lt;/h2&gt;&lt;/div&gt;
+&lt;/article&gt;
+
+&lt;footer&gt;
+    
+&lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;p&gt;&amp;copy; Company 2012&lt;/p&gt;
+            &lt;p style=&quot;float:right;&quot;&gt;
+                This website was last updated at 2012-09-04T04:34:10.309Z
+            &lt;/p&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;&lt;!-- /container --&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+        </entry>
+    
+        <entry>
+            <title>maintianable javascript</title>
+            <link href="http://website.com//posts/maintain-js.html"/>
+            <updated>2012-09-04T04:31:14.000Z</updated>
+            <id>http://website.com//posts/maintain-js.html</id>
+            <content type="html">&lt;!DOCTYPE html&gt;
+&lt;html lange=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;!-- Meta --&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+
+    &lt;!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 --&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;
+
+    &lt;!-- Our site title and description --&gt;
+    &lt;title&gt;maintianable javascript | Your Website&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;When your website appears in search results in say Google, the text here will be shown underneath your website's title.&quot; /&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website&quot; /&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;Your Name&quot; /&gt;
+
+    &lt;!-- Output DocPad produced meta elements --&gt;
+    &lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad&quot;/&gt;
+
+    &lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+
+    &lt;!-- DocPad Meta Information --&gt;
+    &lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad&quot;/&gt;
+
+
+    &lt;!-- Icons --&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;ico/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;ico/apple-touch-icon-144-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;ico/apple-touch-icon-114-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;ico/apple-touch-icon-72-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;ico/apple-touch-icon-57-precomposed.png&quot;&gt;
+
+    &lt;!-- Shims: IE6-8 support of HTML5 elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+        &lt;script async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Styles --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/vendor/twitter-bootstrap/css/bootstrap.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/vendor/twitter-bootstrap/css/bootstrap-responsive.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Markup --&gt;
+    &lt;div class=&quot;navbar navbar-fixed-top&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+                &lt;ul class=&quot;nav&quot;&gt;
+                    
+                        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/hello.html&quot; class=&quot;&quot;&gt;
+                            &lt;a href=&quot;/pages/hello.html&quot; property=&quot;dc:title&quot;&gt;This is a Page&lt;/a&gt;
+                        &lt;/li&gt;
+                    
+                        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts.html&quot; class=&quot;&quot;&gt;
+                            &lt;a href=&quot;/pages/posts.html&quot; property=&quot;dc:title&quot;&gt;Posts&lt;/a&gt;
+                        &lt;/li&gt;
+                    
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
+            &lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
+    &lt;h1&gt;maintianable javascript&lt;/h1&gt;
+    &lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;toehusaeoaeohuseountahoeushaeowooo&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;aeouaeou&lt;/li&gt;
+&lt;li&gt;aeouaeouou&lt;/li&gt;
+&lt;li&gt;real-time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre lang=&quot;js```&quot;&gt;    aoeuaeo
+    aoeuaeou
+    aoeu
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;mmmm&lt;/h1&gt;
+
+&lt;h2&gt;mmm&lt;/h2&gt;&lt;/div&gt;
+&lt;/article&gt;
+
+&lt;footer&gt;
+    
+&lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;p&gt;&amp;copy; Company 2012&lt;/p&gt;
+            &lt;p style=&quot;float:right;&quot;&gt;
+                This website was last updated at 2012-09-04T04:34:10.309Z
+            &lt;/p&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;&lt;!-- /container --&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+        </entry>
+    
+        <entry>
+            <title>the best restaurants in Glendale</title>
+            <link href="http://website.com//posts/restaurants.html"/>
+            <updated>2012-09-04T04:31:14.000Z</updated>
+            <id>http://website.com//posts/restaurants.html</id>
+            <content type="html">&lt;!DOCTYPE html&gt;
+&lt;html lange=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;!-- Meta --&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+
+    &lt;!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 --&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;
+
+    &lt;!-- Our site title and description --&gt;
+    &lt;title&gt;the best restaurants in Glendale | Your Website&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;When your website appears in search results in say Google, the text here will be shown underneath your website's title.&quot; /&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website&quot; /&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;Your Name&quot; /&gt;
+
+    &lt;!-- Output DocPad produced meta elements --&gt;
+    &lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad&quot;/&gt;
+
+    &lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+
+    &lt;!-- DocPad Meta Information --&gt;
+    &lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad&quot;/&gt;
+
+
+    &lt;!-- Icons --&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;ico/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;ico/apple-touch-icon-144-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;ico/apple-touch-icon-114-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;ico/apple-touch-icon-72-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;ico/apple-touch-icon-57-precomposed.png&quot;&gt;
+
+    &lt;!-- Shims: IE6-8 support of HTML5 elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+        &lt;script async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Styles --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/vendor/twitter-bootstrap/css/bootstrap.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/vendor/twitter-bootstrap/css/bootstrap-responsive.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Markup --&gt;
+    &lt;div class=&quot;navbar navbar-fixed-top&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+                &lt;ul class=&quot;nav&quot;&gt;
+                    
+                        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/hello.html&quot; class=&quot;&quot;&gt;
+                            &lt;a href=&quot;/pages/hello.html&quot; property=&quot;dc:title&quot;&gt;This is a Page&lt;/a&gt;
+                        &lt;/li&gt;
+                    
+                        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts.html&quot; class=&quot;&quot;&gt;
+                            &lt;a href=&quot;/pages/posts.html&quot; property=&quot;dc:title&quot;&gt;Posts&lt;/a&gt;
+                        &lt;/li&gt;
+                    
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
+            &lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
+    &lt;h1&gt;the best restaurants in Glendale&lt;/h1&gt;
+    &lt;div class=&quot;post-content&quot;&gt;&lt;h2&gt;blab bla&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;oeuoe&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;eouoeu&lt;/p&gt;
+
+&lt;p&gt;git clone&lt;br /&gt;git bla&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre lang=&quot;javascript&quot;&gt;  function bla(){
+    console.log('bla');
+  };
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/article&gt;
+
+&lt;footer&gt;
+    
+&lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;p&gt;&amp;copy; Company 2012&lt;/p&gt;
+            &lt;p style=&quot;float:right;&quot;&gt;
+                This website was last updated at 2012-09-04T04:34:10.309Z
+            &lt;/p&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;&lt;!-- /container --&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+        </entry>
+    
+        <entry>
+            <title>ruby blocks are awesome</title>
+            <link href="http://website.com//posts/ruby-block.html"/>
+            <updated>2012-09-04T04:31:14.000Z</updated>
+            <id>http://website.com//posts/ruby-block.html</id>
+            <content type="html">&lt;!DOCTYPE html&gt;
+&lt;html lange=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;!-- Meta --&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+
+    &lt;!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 --&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;
+
+    &lt;!-- Our site title and description --&gt;
+    &lt;title&gt;ruby blocks are awesome | Your Website&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;When your website appears in search results in say Google, the text here will be shown underneath your website's title.&quot; /&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website&quot; /&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;Your Name&quot; /&gt;
+
+    &lt;!-- Output DocPad produced meta elements --&gt;
+    &lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad&quot;/&gt;
+
+    &lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+
+    &lt;!-- DocPad Meta Information --&gt;
+    &lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad&quot;/&gt;
+
+
+    &lt;!-- Icons --&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;ico/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;ico/apple-touch-icon-144-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;ico/apple-touch-icon-114-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;ico/apple-touch-icon-72-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;ico/apple-touch-icon-57-precomposed.png&quot;&gt;
+
+    &lt;!-- Shims: IE6-8 support of HTML5 elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+        &lt;script async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Styles --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/vendor/twitter-bootstrap/css/bootstrap.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/vendor/twitter-bootstrap/css/bootstrap-responsive.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Markup --&gt;
+    &lt;div class=&quot;navbar navbar-fixed-top&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+                &lt;ul class=&quot;nav&quot;&gt;
+                    
+                        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/hello.html&quot; class=&quot;&quot;&gt;
+                            &lt;a href=&quot;/pages/hello.html&quot; property=&quot;dc:title&quot;&gt;This is a Page&lt;/a&gt;
+                        &lt;/li&gt;
+                    
+                        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts.html&quot; class=&quot;&quot;&gt;
+                            &lt;a href=&quot;/pages/posts.html&quot; property=&quot;dc:title&quot;&gt;Posts&lt;/a&gt;
+                        &lt;/li&gt;
+                    
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
+            &lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
+    &lt;h1&gt;ruby blocks are awesome&lt;/h1&gt;
+    &lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;toehusaeoaeohuseountahoeushaeowooo&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;aeouaeou&lt;/li&gt;
+&lt;li&gt;aeouaeouou&lt;/li&gt;
+&lt;li&gt;real-time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre lang=&quot;js```&quot;&gt;    aoeuaeo
+    aoeuaeou
+    aoeu
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;mmmm&lt;/h1&gt;
+
+&lt;h2&gt;mmm&lt;/h2&gt;&lt;/div&gt;
+&lt;/article&gt;
+
+&lt;footer&gt;
+    
+&lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;p&gt;&amp;copy; Company 2012&lt;/p&gt;
+            &lt;p style=&quot;float:right;&quot;&gt;
+                This website was last updated at 2012-09-04T04:34:10.309Z
+            &lt;/p&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;&lt;!-- /container --&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+        </entry>
+    
+</feed>
