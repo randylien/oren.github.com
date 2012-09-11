@@ -1,0 +1,186 @@
+
+
+/* Share block */
+#block-block-22 {
+	border: none;
+}
+
+.block-details {
+	padding: 10px;
+	padding-top: 0;
+}
+
+.block-details hr {
+	border: none;
+	border-top: 1px dotted #aaa;
+}
+
+.block-details h3, .block-details p {
+	margin: 0 0 3px 0;	
+}
+
+
+.labs-list {
+	margin: 0;
+}
+
+.labs-list li {
+	list-style: none;
+	position: relative;
+	margin-bottom: 10px;
+	height: 75px;
+}
+
+.labs-list li.last {
+	margin-bottom: 0;
+}
+
+.labs-list li .thumbnail {
+	height: 75px;
+	width: 75px;
+	position: absolute;
+	left: 0;
+}
+
+.labs-list li .thumbnail a, 
+.labs-list li .thumbnail a img {
+	height: 100%;
+	width: 100%;
+}
+
+img.shadow {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.labs-list li .details {
+	margin-left: 80px;
+}
+
+.labs-list li .details h3, .labs-list li .details p {
+	margin: 0 0 3px 0;	
+}
+
+.labs-list li .details h3 {
+	font-weight: bold;
+	font-size: 12px;
+}
+
+/* product-flash-information.tpl.php */
+.product-flash-info,
+.teams-grid {
+  /*
+	margin-top: 10px;
+	margin-bottom: 15px;
+  /**/
+	background: transparent url(../images/bg-flash-product.png);
+	position: relative;
+  /**/
+}
+
+.product-flash-info .image-container {
+	overflow: hidden;
+	padding-bottom: 5px;
+}
+
+.product-flash-info .image-container a.no-text-decoration {
+	display: inline-block;
+	width: 465px;
+	height: 260px;
+}
+
+.product-flash-info .image-container a p {
+	padding: 5px;
+	margin: 0;
+	color: #1b1b1b;
+}
+
+.product-flash-info .image-container a img {
+	width: 100%;
+	height: 240px;
+}
+
+.product-flash-info .image-container a.last {
+	width: 228px;
+}
+
+.product-flash-info .share-buttons {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100px;
+	height: 220px;
+	background-color: #888;
+	padding-top: 20px;
+    text-align: center;
+    /*
+	-moz-border-radius: 0px 5px 0px 0px;
+	-webkit-border-radius: 0px 5px 0px 0px;
+ 	border-radius: 0px 5px 0px 0px;
+  /**/
+}
+
+.product-flash-info ul.front-share-buttons {
+	list-style-type: none;
+	margin: 0; 
+  margin-top:-10px;
+	padding: 0; 
+	overflow: hidden;
+}
+
+ul.share-buttons { 
+	list-style-type: none;
+	margin: 10px 0 5px;
+	padding: 0; 
+	overflow: hidden;
+}
+ul.share-buttons li {
+	padding: 0;
+	margin: 0 10px 0 0;
+	float: left; 
+}
+
+ul.share-buttons li.facebook {
+  padding-top: 2px; 
+  padding-left: 2px;
+}
+
+.product-flash-info .share-buttons iframe {
+	margin-bottom: 15px;
+}
+
+.product-flash-info .share-buttons span.IN-widget {
+	display: inline !important;
+}
+
+#edit-comment-body .form-textarea-wrapper .wysiwyg {
+	width: 567px !important;
+}
+
+.teams-grid {
+	background: none;
+	height: 286px;
+}
+
+.teams-grid img {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.page-taxonomy-term-1 #content h1#page-title { display: none; }
+
+/* Login Page */
+.page-user #footer { border: none; }
+
+.front #extra .region-sidebar-second #block-block-17 { height: 200px; }
+
+/* Technology Pages */
+#content #article-8 .field-items img { margin-left: -20px; }
+
+.page-node-7 #content h2 { padding-left: 0; }
+.page-node-7 #content .field-item table#what-we-want td { width: 300px; }
+
+.page-node-7 #content .field-item table td:first-child { width: 120px; padding-top: 10px; padding-bottom: 10px; }

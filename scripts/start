@@ -1,0 +1,5 @@
+#!/bin/bash
+
+forever start -o logs/docpad.log -e logs/docpad.err ./node_modules/docpad/bin/docpad run --env static
+forever start -o logs/updater.log -e logs/updater.err updater/server.js
+

@@ -2,7 +2,7 @@ var http = require('http');
 var spawn = require('child_process').spawn;
 
 http.createServer(function(req, res) {
-  if (req.method === 'POST') {
+  if (req.method === 'POST' && req.url === '/update') {
     console.log('git pull');
 
     var git = spawn('git', ['pull', 'origin', 'master']);

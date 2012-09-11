@@ -1,0 +1,61 @@
+/* .title { */
+/*   margin-bottom: 50px; */
+/* } */
+/*  */
+/* .title span { */
+/*   font-size: 20px; */
+/* } */
+
+#header #logo {
+  margin-bottom: 40px;
+}
+
+#header #logo a {
+  color: #4D4E54;
+}
+
+#header h1 span {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 68px;
+  height: 64px;
+  background: transparent url(../images/yp-logo.png) 0 0 no-repeat;
+  vertical-align: middle;
+}
+
+#header .util .menu li:last-child {
+  border-right: none;
+  margin-top: 20px;
+}
+
+#block-block-4 {
+  margin-top: 20px;
+}
+
+article.node section .user-info .user-details {
+  background-color: #F7F7D4
+}
+
+.work {
+  font-size: 12px;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+.global-nav .bar .wrapper > ul > li {
+  font-size: 14px;
+}
+
+.tech-talk {
+  padding-top: 10px;
+  margin: 0px 0px 10px 90px;
+}
+
+#header {
+  font-size: 14px;
+}
+
+#header #logo {
+  font-size: 22px;
+}

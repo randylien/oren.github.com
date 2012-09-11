@@ -1,0 +1,8 @@
+/* Stylesheets for IE7 */
+article section .user-info img.shadow {
+	z-index: 999;
+}
+
+article section .user-info .user-picture img {
+	display: none1;
+}

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: ruby blocks are awesome!
+title: our search is awoseme..
 author_image: './images/andrew.jpg'
-author_name: 'Andrew Kim'
-summery: blab aoeu aeouh oeuaeou aeouaoeu
+author_name: 'Daniel'
+summery: blab aoeu aeouao
 tags: ['intro','post']
 ---
 
@@ -14,9 +14,9 @@ tags: ['intro','post']
 * real-time
 
 ```js```
-    aoeuaeo
-    aoeuaeou
-    aoeu
+    function() {
+      console.log('he');
+    }
 ```
 
 ## mmmm
