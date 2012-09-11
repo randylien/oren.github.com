@@ -7,8 +7,8 @@ title: 'Home'
     <div class="wrapper">
       <div id="main">
         <div>
-          <img src="images/left.jpg">
-          <img src="images/right.png">
+          <img src="/images/left.jpg">
+          <img src="/images/right.png">
         </div>
 
         <div id="content" class="page-main">

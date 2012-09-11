@@ -5,6 +5,7 @@ author_image: './images/andrew.jpg'
 author_name: 'Andrew Kim'
 summery: blab aoeu aeouh oeuaeou aeouaoeu
 tags: ['intro','post']
+date: 2012-12-21
 ---
 
 # toehusaeoaeohuseountahoeushaeowooo
