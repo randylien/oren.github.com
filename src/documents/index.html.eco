@@ -13,7 +13,7 @@ title: 'Home'
 
         <div id="content" class="page-main">
 
-          <% for document in @getCollection('posts').toJSON(): %>
+          <% for document in @getCollection('posts').toJSON()[0..4]: %>
             <article id="article-99" class="node node-article node-promoted node-teaser en clearfix" role="article" about="" typeof="sioc:Item foaf:Document">
               <header>
                 <h2 property="dc:title" datatype="" class="article-title">

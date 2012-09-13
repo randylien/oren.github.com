@@ -8,18 +8,17 @@ yes, it's that simple.
 
 Clone the project and run the server on your laptop
 
+install node - http://nodejs.org
+
     git clone git@git.corp.attinteractive.com:dstools/engineering-website.git  
     cd engineering-website 
-    install node - http://nodejs.org
-    npm install 
-    npm install docpad -g
-    docpad run 
+    npm install # installs all dependencies
+    nod_modules/docpad/bin/docpad run 
 
 Open [http://localhost:9778/](http://localhost:9778/)
 
 Create or edit a blog post. all posts are in src/documents/posts
     
-    for example
     touch src/documents/posts/best-restaurants.html.md
 
 if it looks good on your localhost commit and push your changes
