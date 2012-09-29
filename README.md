@@ -1,2 +1,2 @@
 # blog posts
-[browserify](browserify.html.md)
+[browserify](posts/browserify.html.md)
