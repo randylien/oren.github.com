@@ -7,6 +7,21 @@ authorImage: 'https://secure.gravatar.com/avatar/ea28a1533185f15e9364a8db6f9c0ba
 layout: post
 ---
 
+you are building the next killer app or website. you want to sign up users so you have to store their info in your DB.
+you wear your security hat and start dreaming on ways to make sure you got everything in check - 
+bcrypt, salting and site-secrets comes into mind. but what about the passwords? can you trust your users to create hard to guess password?
+good luck with that. expect a lot of 'abcdefg'...
+oh, and don't forget a mitigation plan in case you get hacked.
+
+one option is to use facebook, twitter or google. but all of those are centralized and for-profit entities.
+can you trust them to hold info about your users?
+
+OpenId - usability (using urls is not intuitive for non-geeks).
+
+based on verified email address.
+
+
+
 It's decentralized public-key based authentication, wrapped up in an extremely user- and dev-friendly package. Francois Marier did a good job of explaining it at Kiwi PyCon 2012: https://www.youtube.com/watch?v=iZBTc7iEkQY
 (Think OpenID, but easier to use, easier to implement, and with better privacy protection.)
 In brief: instead of a username and password at login, you get a user's email address and cryptographically signed assertion proving their ownership of that address. The assertions are ephemeral and scoped to your site, so once you verify it, you can set a session cookie and throw away the assertion. No more password column in your database, yet you still retain a direct relationship with your users.
