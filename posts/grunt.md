@@ -6,7 +6,7 @@ first, let's install grunt as a global package:
 
     npm install grunt -g
 
-create `grunt.js` this is grunt's config file.
+create `grunt.js` in the root dir of your project. this is grunt's config file.
 
     module.exports = function(grunt) {
       
