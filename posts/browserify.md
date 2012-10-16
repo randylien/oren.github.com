@@ -1,3 +1,12 @@
+{{{
+  "title" : "Browserify",
+  "authorName": "Oren",
+  "authorLink": "https://github.com/oren",
+  "authorImage": "https://secure.gravatar.com/avatar/ea28a1533185f15e9364a8db6f9c0bae?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+  "tags" : [ "tech" ],
+  "date" : "9-15-2012"
+}}}
+
 ![browserify](http://substack.net/doc/hujs/07_browserify.png)
 
 How do you organize your client side js code?  
@@ -6,19 +15,15 @@ and you simply require the file you want to use:
 
 saveUser.js
 
-```js
-module.exports = function(userId) {
-  // save user in DB
-  console.log('user' + userId + ' saved in DB');
-};
-```
+    module.exports = function(userId) {
+      // save user in DB
+      console.log('user' + userId + ' saved in DB');
+    };
    
 app.js
 
-```js
-var foo = require('./saveUser.js');  # foo contains a function that can save our user
-foo(1);                              # calling our function with a user id
-```
+    var foo = require('./saveUser.js');  # foo contains a function that can save our user
+    foo(1);                              # calling our function with a user id
 
 great for code reuse and easy to test, right? true, but how is that relevant to client-side js?  
 I am glad you asked. I use a tool called [browserify](https://github.com/substack/node-browserify) that let me use CommonJS in the browser!  
@@ -27,18 +32,16 @@ go ahead and create app.js and saveUser.js from the code samples above.
 
 now add a simple index.html that uses app.js
 
-```html
-<!DOCTYPE html>
-  <head>
-  </head>
+    <!DOCTYPE html>
+      <head>
+      </head>
 
-  <body>
-    <p>CommonJS in the browser!</p>
-   
-     <script src="app.js"></script>
-  </body>
-</html>
-```
+      <body>
+        <p>CommonJS in the browser!</p>
+       
+         <script src="app.js"></script>
+      </body>
+    </html>
 
 if you look at the browser's console you will notice an error: `Uncaught ReferenceError: require is not defined`   
 that makes sense, since require is not available for js client side. let's fix that with browserify.
@@ -60,18 +63,16 @@ that's nice but we need to save the output into a file, right? lets do that with
 
 now we can use bundle.js insted of app.js in our html file:
 
-```html
-<!DOCTYPE html>
-  <head>
-  </head>
+    <!DOCTYPE html>
+      <head>
+      </head>
 
-  <body>
-    <p>CommonJS in the browser!</p>
+      <body>
+        <p>CommonJS in the browser!</p>
 
-    <script src="bundle.js"></script>
-  </body>
-</html>
-```
+        <script src="bundle.js"></script>
+      </body>
+    </html>
 
 if you see "user saved in DB" in the browser's console, everything is fine.
 
