@@ -90,7 +90,6 @@ create `grunt.js` in the root dir of your project. this is grunt's config file.
       grunt.registerTask('default', 'lint concat min');
     };
 
-modify the files to fit into your project or even remove sections that are not relevant to you.  
 let's see what happend when you run `grunt`
 
 <pre class="nocode">
@@ -120,13 +119,13 @@ Done, without errors.
 </pre>
 
 That's it. all the tasks that are defined in grunt.registerTask will run - lint, concat and min.  
-notice that lint, concat and min are all tasks that comes built-in with grunt. many people wrote all kind of tasks that provide more functionality.  
+notice that lint, concat and min are all tasks that comes built-in with grunt. There are additional tasks that are not part of the core grunt but avaialable as well. we will look at some of them in the next section.
 
 Now that we got a basic flow working, let's add a few more things.
 
 ## Compiling stylus files into css
 
-I like [stylus](http://learnboost.github.com/stylus/). you write very clean css-like files that compile into css.  
+I like [stylus](http://learnboost.github.com/stylus/). You write very clean css-like files that compile into css.  
 Let's add a grunt task that do just that. I want to type `grunt stylus` and all my .style files will compile into .css files.  
 add the following to grunt.js:
 
@@ -141,7 +140,7 @@ add the following to grunt.js:
 if you'll try running it with `grunt stylus` you'll see this warning:
 
 <pre class="nocode">
-<<WARN> Task "stylus" not found. Use --force to continue. <</WARN>
+Warning - Task "stylus" not found. Use --force to continue.
 Aborted due to warnings.
 </pre>
 
