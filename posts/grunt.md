@@ -9,26 +9,35 @@
 
 ![grunt](http://gruntjs.com/img/logo.png)
 
-## WAT?
-Grunt is a build tool JavaScript project. it automate all the annoying tasks so you don't have to think about them.
-a few common tasks - linting, assets minification, compiling stuff (coffeescript, stylus, etc) and running your tests on code change.
+## What is Grunt?
+Grunt is a build tool for JavaScript project. it automate all the annoying tasks so you don't have to think about them.
+a few common tasks - linting, assets minification, compiling stuff (coffeescript, stylus, etc) and running your tests on code change.  
+It's open source and available on [github]. [This](http://gruntjs.com/) is Grunt's website.
 
-## example for using grunt
+In this blog post I want to show you how to install it and  how to automate a few common tasks.  
+Hopefuly it will convince you to drop everything you are doing and you'll find yourself adding grunt to your current project.
 
-In this example I use grunt to do the following:  
-linting, compiling stylus files, minimizing css files and concatenation and minimizing js files.  
-In addition, it will compile stylus files into css when they change.
+*note - your can get the complete code sample [here](https://github.com/oren/oren.github.com/tree/master/posts/grunt)*
 
-first, let's install grunt as a global package:
+## Installing Grunt
+Grunt is available as an npm module. npm is the package manager for node.js, so you'll need to install node first.  
+Go get it [here](http://nodejs.org/) and come back. I am waiting.
+
+Now that you have node, you can use npm to install all kind of fun packages. grunt is one of them: 
 
     npm install grunt -g
 
+the above command will install grunt globally (that's the reason for the -g) - it will be available for use in all of your projects. Once grunt has been installed, you can type grunt --help at the command line for more information. 
+
+## Lint, concatenate and minimize our JavaScript files
+JavaScript is a wild language. you can twist and bend it to your needs but you can easily shoot yourself in the foot.  
+Javascript Lint is a tool that checks for common mistake in your codebase. it will be nice to use lint and get errors from all the Javascript files in my project. In addition for lintinting, I want to concatenate the JavaScript files into a single file, and minimize that file.  
 create `grunt.js` in the root dir of your project. this is grunt's config file.
 
     module.exports = function(grunt) {
       grunt.initConfig({
         lint: {
-          files: ['public/js/app.js', 'grunt.js']
+          files: ['public/js/app.js']
         },
         jshint: {
           options: {
@@ -39,26 +48,9 @@ create `grunt.js` in the root dir of your project. this is grunt's config file.
             newcap: true,
             noarg: true,
             sub: true,
-            // undef: true
+            undef: true,
             boss: true,
             eqnull: true
-          }
-        },
-        stylus: {
-          compile : {
-            files : {
-              'public/css/site.css' : 'public/styles/*.styl'
-            }
-          }
-        },
-        cssmin : {
-          dist : {
-            src: [
-              'public/css/font-awesome.css',
-              'public/css/site.css',
-              'public/css/prettify.css'
-            ],
-            dest: 'public/css/production.css'
           }
         },
         concat: {
@@ -76,17 +68,10 @@ create `grunt.js` in the root dir of your project. this is grunt's config file.
             src : 'public/js/production.js',
             dest : 'public/js/production.min.js'
           }
-        },
-        watch: {
-          files: ['public/styles/*.styl'],
-          tasks: 'stylus'
         }
       });
 
-      grunt.loadNpmTasks('grunt-contrib');
-      grunt.loadNpmTasks('grunt-css');
-
-      grunt.registerTask('default', 'lint stylus cssmin concat min');
+      grunt.registerTask('default', 'lint concat min');
     };
 
 modify the files to fit into your project or even remove sections that are not relevant to you.  
@@ -118,8 +103,104 @@ Done, without errors.
 </span>
 </pre>
 
-That's it. all the tasks that are defined in grunt.registerTask will run - lint stylus cssmin concat min.  
-One more thing - watching changes in stylus files - 
+That's it. all the tasks that are defined in grunt.registerTask will run - lint concat min.  
+notice that lint, concat and min are all tasks that comes built-in with grunt. many people wrote all kind of tasks that provide more functionality.  
+
+Now that we got a basic flow working, let's add a few more things.
+
+## Compiling stylus files into css
+
+I like [stylus](http://learnboost.github.com/stylus/). you write very clean css-like files that compile into css.
+Let's add a grunt task that do just that. I want to type `grunt stylus` and all my .style files will compile into .css files.  
+add the following to grunt.js:
+
+    stylus: {
+      compile : {
+        files : {
+          'public/css/site.css' : 'public/styles/*.styl'
+        }
+      }
+    },
+
+if you'll try running it with `grunt stylus` you'll see this warning:
+
+<pre>
+<span class="nocode">
+<WARN> Task "stylus" not found. Use --force to continue. </WARN>
+Aborted due to warnings.
+</span>
+</pre>
+
+what happend? oh, stylus task does not come with grunt. we'll have to add it ourself.
+
+    npm install grunt-contrib --save-dev
+
+and add this line before the last line of grunt.js:
+
+    grunt.loadNpmTasks('grunt-contrib');
+
+and add app.styl file inside public/styles
+
+run `grunt stylus` and hopefully everything is ok now.
+
+now add it to registerTask: 
+
+    grunt.registerTask('default', 'lint stylus concat min');
+
+and run all of them with `grunt`
+
+## Minimize css files
+
+great. now let's add a grunt task to minimize all our css files into one file that will be used in production environment.  
+start by adding this key to the grunt.js file:
     
+    cssmin : {
+      dist : {
+        src: [
+          'public/css/font-awesome.css',
+          'public/css/site.css',
+          'public/css/prettify.css'
+        ],
+        dest: 'public/css/production.css'
+      }
+    },
+
+cssmin is part of the grunt-css package. install it with npm:
+
+    npm install grunt-css --save-dev
+
+and add this line right next to the other loadNpmTasks line:
+
+    grunt.loadNpmTasks('grunt-css');                                 
+
+and run it with `grunt cssmin`.  
+if all is good, add it to registerTask line and run `grunt`
+
+    grunt.registerTask('default', 'lint stylus concat cssmin min');  
+
+## Watch for file changes and do stuff
+
+if everything is working so far, let's add one more thing. grunt can watch for file changes and run whatever tasks we want.  
+let's run the lint task whenever we change our JavaScript files and the stylus task when we modify our stylus files:
+
+    watch: {
+      stylus: {
+        files: ['public/styles/*.styl'],
+        tasks: 'stylus'
+      },
+      lint: {
+        files: '<config:lint.files>',
+        tasks: 'lint'
+      }
+    }
+
+now run:
+
     grunt watch
 
+and edit app.js or app.styl files and notice the watch doing it's job.  
+
+## Summary
+
+Well done, you know how grunt work, how to add tasks to grunt and how to watch for file changes.  
+Now go ahead and start using it!
