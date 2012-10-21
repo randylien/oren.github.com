@@ -10,14 +10,14 @@
 ![grunt](http://gruntjs.com/img/logo.png)
 
 ## What is Grunt?
-Grunt is a build tool for JavaScript project. it automate all the annoying tasks so you don't have to think about them.
-a few common tasks - linting, assets minification, compiling stuff (coffeescript, stylus, etc) and running your tests on code change.  
-It's open source and available on [github]. [This](http://gruntjs.com/) is Grunt's website.
+Grunt is a build tool for JavaScript projects. It automate all the annoying tasks so you don't have to think about them.
+a few common examples are linting, assets minification, compiling stuff (coffeescript, stylus, etc) and running your tests on code change.  
+It's open source and available on github. [This](http://gruntjs.com/) is Grunt's website.
 
 In this blog post I want to show you how to install it and  how to automate a few common tasks.  
-Hopefuly it will convince you to drop everything you are doing and you'll find yourself adding grunt to your current project.
+Hopefully it will convince you to drop everything you are doing and you'll find yourself adding grunt to your current project.
 
-*note - your can get the complete code sample [here](https://github.com/oren/oren.github.com/tree/master/posts/grunt)*
+*note - your can get the complete code sample [here](https://github.com/oren/oren.github.com/tree/master/posts/grunt).*
 
 ## Installing Grunt
 Grunt is available as an npm module. npm is the package manager for node.js, so you'll need to install node first.  
@@ -25,13 +25,29 @@ Go get it [here](http://nodejs.org/) and come back. I am waiting.
 
 Now that you have node, you can use npm to install all kind of fun packages. grunt is one of them: 
 
-    npm install grunt -g
+<pre class="nocode">
+npm install grunt -g
+</pre>
 
-the above command will install grunt globally (that's the reason for the -g) - it will be available for use in all of your projects. Once grunt has been installed, you can type grunt --help at the command line for more information. 
+The above command will install grunt globally (that's the reason for the -g) - it will be available for use in all of your projects. Once grunt has been installed, you can type grunt --help at the command line for more information. 
 
 ## Lint, concatenate and minimize our JavaScript files
 JavaScript is a wild language. you can twist and bend it to your needs but you can easily shoot yourself in the foot.  
 Javascript Lint is a tool that checks for common mistake in your codebase. it will be nice to use lint and get errors from all the Javascript files in my project. In addition for lintinting, I want to concatenate the JavaScript files into a single file, and minimize that file.  
+
+create a new folder for your project and add the following structure:
+
+<pre class="nocode">
+    └── public
+        ├── css
+        ├── js
+        │   └── app.js
+        └── styles
+            └── app.styl
+</pre>
+
+app.js and app.styl can remain empty. you can also use [my code](https://github.com/oren/oren.github.com/tree/master/posts/grunt).
+
 create `grunt.js` in the root dir of your project. this is grunt's config file.
 
     module.exports = function(grunt) {
@@ -77,9 +93,9 @@ create `grunt.js` in the root dir of your project. this is grunt's config file.
 modify the files to fit into your project or even remove sections that are not relevant to you.  
 let's see what happend when you run `grunt`
 
-<pre>
+<pre class="nocode">
 grunt
-<span class="nocode">
+
 Running "lint:files" (lint) task
 Lint free.
 
@@ -103,14 +119,14 @@ Done, without errors.
 </span>
 </pre>
 
-That's it. all the tasks that are defined in grunt.registerTask will run - lint concat min.  
+That's it. all the tasks that are defined in grunt.registerTask will run - lint, concat and min.  
 notice that lint, concat and min are all tasks that comes built-in with grunt. many people wrote all kind of tasks that provide more functionality.  
 
 Now that we got a basic flow working, let's add a few more things.
 
 ## Compiling stylus files into css
 
-I like [stylus](http://learnboost.github.com/stylus/). you write very clean css-like files that compile into css.
+I like [stylus](http://learnboost.github.com/stylus/). you write very clean css-like files that compile into css.  
 Let's add a grunt task that do just that. I want to type `grunt stylus` and all my .style files will compile into .css files.  
 add the following to grunt.js:
 
@@ -124,16 +140,16 @@ add the following to grunt.js:
 
 if you'll try running it with `grunt stylus` you'll see this warning:
 
-<pre>
-<span class="nocode">
-<WARN> Task "stylus" not found. Use --force to continue. </WARN>
+<pre class="nocode">
+<<WARN> Task "stylus" not found. Use --force to continue. <</WARN>
 Aborted due to warnings.
-</span>
 </pre>
 
 what happend? oh, stylus task does not come with grunt. we'll have to add it ourself.
 
-    npm install grunt-contrib --save-dev
+<pre class="nocode">
+npm install grunt-contrib --save-dev
+</pre>
 
 and add this line before the last line of grunt.js:
 
@@ -167,7 +183,9 @@ start by adding this key to the grunt.js file:
 
 cssmin is part of the grunt-css package. install it with npm:
 
-    npm install grunt-css --save-dev
+<pre class="nocode">
+npm install grunt-css --save-dev
+</pre>
 
 and add this line right next to the other loadNpmTasks line:
 
