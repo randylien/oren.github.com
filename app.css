@@ -10,16 +10,15 @@ h3 {
   font-size: 20px;
 }
 
-#my-header {
-  float: left;
-}
-
-#my-header span {
-  color: #999;
-}
-
 li {
-
   margin-bottom: 7px;
+}
 
+.hero-unit {
+  padding: 20px;
+  margin-bottom: 0px;
+}
+
+.hero-unit a {
+  margin-left: 30px;
 }
