@@ -1,4 +1,5 @@
-![grunt](http://gruntjs.com/img/logo.png)
+![grunt](http://a2.ec-images.myspacecdn.com/images02/56/4931bf18944e44d4b4908fdb0decebac/l.jpg)
+
 
 ## What is Grunt?
 Grunt is a build tool for JavaScript projects. It automate all the annoying tasks so you don't have to think about them.
