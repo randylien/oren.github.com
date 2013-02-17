@@ -1,7 +1,7 @@
 # Javascript Source Analysis
 
-It's important to get an idea of the maintainability and complexity of your codebase.
-I am using a great tool called [plato](https://github.com/jsoverson/plato) that doing exatly that. You run it against your js files and it generate a beutiful website that gives you a visual insight about the health of your project.
+It's important to get an idea of the maintainability of your codebase.
+I am using a great tool called [plato](https://github.com/jsoverson/plato) that doing exatly that. You run it against your js files and it generate a beautiful website that gives you a visual insight about the health of your project.
 
     plato -d report-folder *.js mocks/*.js test/integration/*.js test/unit/*.js lwes/*.js
 
