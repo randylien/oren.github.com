@@ -138,6 +138,8 @@ This function have many if-else statements that each can be extracted into it's 
       }
     }
 
+**Note** I am nesting the small functions instead of locating them outside of the router function so I can avoid passing the arguments to each one. Don't you agree that Javascript clojures are awesome?!
+
 Let's generate the report again:
 
     plato -d report-folder *.js mocks/*.js test/integration/*.js test/unit/*.js lwes/*.js
