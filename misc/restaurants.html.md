@@ -1,16 +1,16 @@
 ---
-date: 2012-09-15
-title: Preview markdown files locally
+date: 2013-02-14
+title: Glandale's best eateries
 authorLink: 'https://github.com/oren'
-authorName: 'oren'
-authorImage: 'https://secure.gravatar.com/avatar/ea28a1533185f15e9364a8db6f9c0bae?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png'
+authorName: 'Xiangning'
+authorImage: 'http://www.gravatar.com/avatar/d4c46edb7c48ac23ac75d5473ee252ec?s=140&d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png'
 layout: post
 ---
 
 Most of the engineering teams are located in Glendale, CA.
 Glendale (Eastern end of the San Fernando Valley) is the 3rd largest city in Los Angeles with 191,719 people.
 Also a home for the largest Armenian population.  (1 in 4 are Armenian!)
-With a large city comes big demands for great places to get your "grub' on".
+With a large city comes big demands for great places to "get your grub on".
 
 Here are my picks for the best eateries in town:
 
@@ -40,7 +40,7 @@ Price Range:  $$$$
 ![Imgur](http://i.imgur.com/kgxPz.jpg)
 ![Imgur](http://i.imgur.com/Oy26t.jpg)
 
-I have always been a fan of Japanese food and my wife and I have tried some highly recommended Japanese restaurants in Southern California and I must say that this is one of the best.  So who cares if this place is ridiculously expensive right?  If you want FRESH fish this is the place to go in the valley.  This place does not match the price tag to the rent they pay as it is located in a run down strip mall but we all know that sometimes these kind of places are better than the fancy schmancy restaurants.  Omakase in Japanese is a phrase they use to say "I'll leave it to you".  This restaurant is unique in that everything is "omakase" and the sushi chef will only serve you the freshest fish of the day.  If you are like my wife and can only eat California rolls and specialty rolls you will go home hungry!  Some people compare Sushi Nishiya to authentic sushi restaurants in Japan.   Listen to me and SAVE your money for several weeks and go here, you will not regret it.  
+I have always been a fan of Japanese food and I must say that this is one of the best.  So who cares if this place is ridiculously expensive right?  If you want FRESH fish this is the place to go in the valley.  This place does not match the price tag to the rent they pay as it is located in a run down strip mall but we all know that sometimes these kind of places are better than the fancy schmancy restaurants.  Omakase in Japanese is a phrase they use to say "I'll leave it to you".  This restaurant is unique in that everything is "omakase" and the sushi chef will only serve you the freshest fish of the day. Some people compare Sushi Nishiya to authentic sushi restaurants in Japan. Listen to me and try it out, you will not regret it.  
 
 **HAPPY EATING EVERYONE!**
     
