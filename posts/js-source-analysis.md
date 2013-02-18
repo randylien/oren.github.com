@@ -159,7 +159,7 @@ Let's drill down to the file-level report:
 
 After this refactor the complexity of the router function was reduced from 11 to 6, and each of the small function have a complexity of 2 (hover on the blue circle will show that). 
 
-In addition to complexity report, this tool also use JSHint which helps in ensuring you use good proctices of the Javascript language.
+In addition to complexity report, this tool also use [JSHint](http://www.jshint.com/about) which helps in ensuring you use good proctices of the Javascript language.
 
 Now you can automate it by adding it to your make file and running it with `make report`
 
