@@ -161,11 +161,11 @@ After this refactor the complexity of the router function was reduced from 11 to
 
 In addition to complexity report, this tool also use JSHint which helps in ensuring you use good proctices of the Javascript language.
 
-Now you can automate it by adding it to your make file - 
+Now you can automate it by adding it to your make file and running it with `make report`
 
 <pre>
     report: 
       plato -d report-folder *.js mocks/*.js test/integration/*.js test/unit/*.js lwes/*.js
 </pre>
 
-And you can run it with `make report` and even add it to your Continuous Integration server.
+The last step can be to add it to your Continuous Integration server.
