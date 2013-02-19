@@ -12,6 +12,7 @@ Dependency Injection
 Using a callback
 
     ping = require('./ping.js);
+    mailer = require('./mailer.js');
 
     ping(['bar.com', 'foo.com'], function(data) {
       mailer('server is down', data); 
@@ -20,13 +21,20 @@ Using a callback
 Using an event emitter
 
     pinger = require('./pinger.js');
+    mailer = require('./mailer.js');
 
-    pinger.init(['bar.com', 'foo.com']);
+    pinger.start(['bar.com', 'foo.com']);
 
-    pinger.on('ping', function(data) {
-      mailer('server is down', data); 
-    };
-    pinger.on( 'ping', worker1.sendEmail(data) );
-    pinger.on( 'ping', logger1.logStuff(data) );
+    pinger.on('status', function(data) {
+      console.log('status event', data);
+    });
+
+    pinger.on('siteUp', function(data) {
+      console.log('siteUp event', data);
+    });
+
+    pinger.on('siteDown', function(data) {
+      mailer(data); 
+    });
 
 
