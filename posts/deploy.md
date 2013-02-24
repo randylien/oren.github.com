@@ -1,8 +1,11 @@
-I like TJ Holowaychuk's [Deploy](https://github.com/visionmedia/deploy) tool.
-It's simple, not require any dependencie since it's a 400 lines bash script, and it's easy to read.
-I just put in the bin folder of my project, so anyone on the team can deploy as well.
+![deploy](http://regmedia.co.uk/2013/02/04/hello_kitty_3.jpg)
 
-After setting it up you can run `deploy <host>` to deploy your code.  
+I like TJ Holowaychuk's [Deploy](https://github.com/visionmedia/deploy) tool.
+It's simple, has no dependencie (it's a 400 lines bash script) and easy to read. It uses ssh to run commands on you remote hosts. by commands I mean simple stuff like git clone and mkdir. After setting it up you will be able to deploy your code with `deploy <host>`
+
+First get the [deploy script](https://github.com/visionmedia/deploy/blob/master/bin/deploy) from the repository. I just put it in the bin folder of my project, so anyone on the team can deploy as well.  
+Second, make sure your laptop can ssh without a password to the host you want to deploy to. Also ssh to that host and make sure you can clone your project. If You have issues it's probably due to ssh keys, so take care of that and come back here when you're done.
+
 There is one configuration file that this script is using - deproy.conf. just put it in the project's directory. Here is an example:
 
     [dev1]
@@ -47,6 +50,6 @@ And here is what's going on behind the curtein
     cd /var/www/ci/source && echo `git rev-parse --short HEAD` >> /var/www/ci/.deploys
     cd /var/www/ci/current; SHARED="/var/www/ci/shared" NODE_ENV=prod /var/www/ci/source/bin/restart.sh
 
-Notice that a file .deploys is created on the server. It contain the git shas of each deploy, so you can revert to any previous deploy with `deploy revert`.
+Notice that a file .deploys is created on the server. It contain the git sha of each deploy, so you can revert to any previous deploy with `deploy revert`.
 
 That's it. Enjoy quick and frequent deployments!
