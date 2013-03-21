@@ -12,10 +12,10 @@ Here is an example for a site, the BBC, that is doing it right:
     HTTP/1.1 200 OK
     Last-Modified: Thu, 21 Mar 2013 15:35:31 GMT
 
-(and the body, xml-file, contain the feeds)
+(notice the Last-Modified was returned in the header and the body, xml-file, contain the feeds)
 
 
-Let's copy paste the Last-Modified into the second http call:
+Let's copy paste the Last-Modified into the header of the second request, name the key If-Modified-Since:
 
     curl -v -H "If-Modified-Since: Thu, 21 Mar 2013 15:35:31 GMT" http://feeds.bbci.co.uk/news/technology/rss.xml > xml-file
 =>
@@ -24,3 +24,6 @@ Let's copy paste the Last-Modified into the second http call:
 
 (and the body is empty)
 
+
+So what the BBC are doing is comparing the If-Modified-Since with the Last-Modified (that they saved somewhere on their server).  
+since it's identical they return 304 and empty body.
