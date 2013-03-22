@@ -27,3 +27,8 @@ Let's copy paste the Last-Modified into the header of the second request, name t
 
 So what the BBC are doing is comparing the If-Modified-Since with the Last-Modified (that they saved somewhere on their server).  
 since it's identical they return 304 and empty body.
+
+Thanks to Dan [Mactough](https://github.com/danmactough) for the help on this topic and for writing the awesome [node-feedparser package](https://github.com/danmactough/node-feedparser).  
+More info can be found [here](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers/).
+
+
