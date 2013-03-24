@@ -1,3 +1,5 @@
+Control Flow library - when is the right time to use one?
+
 ![cat](http://gifs.gifbin.com/012010/1264355701_cat.gif)
 
 I like to minimize the usage of abstructions in my node code. Whether it's web frameworks or testing framework or control flow libraries.  
