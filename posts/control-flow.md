@@ -1,8 +1,8 @@
-Control Flow library - when is the right time to use one?
+## Control Flow library - when is the right time to use one?
 
 ![cat](http://gifs.gifbin.com/012010/1264355701_cat.gif)
 
-I like to minimize the usage of abstructions in my node code. Whether it's web frameworks or testing framework or control flow libraries.  
+I like to minimize the usage of abstractions in my node code. Whether it's web frameworks or testing framework or control flow libraries.  
 I just wrote a little module that is part of an rss reader I am working on. All it's doing is inserting urls to my DB based on some simple logic.  
 Here are two versions of this moudule. One with [async](https://github.com/caolan/async#parallel) (control flow library) and the other one without it.
 
