@@ -27,122 +27,126 @@ The router function got a complexity score of 11. Complexity is measured by the 
 
 Firest, let's look at the code:
 
-    // The server's main routes function
-    //
-    // Supports the following end-points:
-    // POST /push
-    // POST /register
-    // POST /register.php
-    // GET /health
-    // GET /health.txt
+```js
+// The server's main routes function
+//
+// Supports the following end-points:
+// POST /push
+// POST /register
+// POST /register.php
+// GET /health
+// GET /health.txt
 
-    function router(config, req, res) {
-      if (req.url == '/push') {
-        if(req.method.toLowerCase() == 'post') {
-          pusher(config, req, res);
-        } else {
-          res.statusCode = 405;
-          res.end();
-        }
-      } else if (req.url == '/register') {
-        if(req.method.toLowerCase() == 'post') {
-          register(config, req, res);
-        } else {
-          res.statusCode = 405;
-          res.end();
-        }
-      } else if (req.url == '/register.php') {
-        if(req.method.toLowerCase() == 'post') {
-          registerLegacy(config, req, res);
-        } else {
-          res.statusCode = 405;
-          res.end();
-        }
-      } else if (req.url == '/health') {
-        if(req.method.toLowerCase() == 'get') {
-          info = health(req.connections);
-          res.end(JSON.stringify(info));
-        } else {
-          res.statusCode = 405;
-          res.end();
-        }
-      } else if (req.url == '/health.txt') {
-        if(req.method.toLowerCase() == 'get') {
-          checkHealth(req, res);
-        } else {
-          res.statusCode = 405;
-          res.end();
-        }
-      } else {
-        res.statusCode = 404;
-        res.end();
-      };
-    };
+function router(config, req, res) {
+  if (req.url == '/push') {
+    if(req.method.toLowerCase() == 'post') {
+      pusher(config, req, res);
+    } else {
+      res.statusCode = 405;
+      res.end();
+    }
+  } else if (req.url == '/register') {
+    if(req.method.toLowerCase() == 'post') {
+      register(config, req, res);
+    } else {
+      res.statusCode = 405;
+      res.end();
+    }
+  } else if (req.url == '/register.php') {
+    if(req.method.toLowerCase() == 'post') {
+      registerLegacy(config, req, res);
+    } else {
+      res.statusCode = 405;
+      res.end();
+    }
+  } else if (req.url == '/health') {
+    if(req.method.toLowerCase() == 'get') {
+      info = health(req.connections);
+      res.end(JSON.stringify(info));
+    } else {
+      res.statusCode = 405;
+      res.end();
+    }
+  } else if (req.url == '/health.txt') {
+    if(req.method.toLowerCase() == 'get') {
+      checkHealth(req, res);
+    } else {
+      res.statusCode = 405;
+      res.end();
+    }
+  } else {
+    res.statusCode = 404;
+    res.end();
+  };
+};
+```
 
 This function have many if-else statements that each can be extracted into it's own function. Let's extract 5 small functions to make it smaller and readable:
 
-    function router(config, req, res) {
-      if (req.url == '/push') { 
-        pushRoute();
-      } else if (req.url == '/register') { 
-        registerRoute();
-      } else if (req.url == '/register.php') { 
-        registerPhpRoute();
-      } else if (req.url == '/health') { 
-        healthRoute();
-      } else if (req.url == '/health.txt') { 
-        healthTxtRoute();
-      } else {
-        res.statusCode = 404;
-        res.end();
-      }
+```js
+function router(config, req, res) {
+  if (req.url == '/push') { 
+    pushRoute();
+  } else if (req.url == '/register') { 
+    registerRoute();
+  } else if (req.url == '/register.php') { 
+    registerPhpRoute();
+  } else if (req.url == '/health') { 
+    healthRoute();
+  } else if (req.url == '/health.txt') { 
+    healthTxtRoute();
+  } else {
+    res.statusCode = 404;
+    res.end();
+  }
 
-      function pushRoute() {
-        if(req.method.toLowerCase() == 'post') {
-          pusher(config,  req, res);
-        } else {
-          res.statusCode = 405;
-          res.end();
-        }
-      }
-
-      function registerRoute() {
-        if(req.method.toLowerCase() == 'post') {
-          register(config, req, res);
-        } else {
-          res.statusCode = 405;
-          res.end();
-        }
-      }
-
-      function registerPhpRoute() {
-        if(req.method.toLowerCase() == 'post') {
-          registerLegacy(config, req, res);
-        } else {
-          res.statusCode = 405;
-          res.end();
-        }
-      }
-
-      function healthRoute() {
-        if(req.method.toLowerCase() == 'get') {
-          info = health(req.connections);
-          res.end(JSON.stringify(info));
-        } else {
-          res.statusCode = 405;
-          res.end();
-        }
-      }
-
-      function healthTxtRoute() {
-        if(req.method.toLowerCase() == 'get') {
-          checkHealth(req, res);
-        } else {
-          res.statusCode = 405;
-          res.end();
-        }
-      }
+  function pushRoute() {
+    if(req.method.toLowerCase() == 'post') {
+      pusher(config,  req, res);
+    } else {
+      res.statusCode = 405;
+      res.end();
     }
+  }
+
+  function registerRoute() {
+    if(req.method.toLowerCase() == 'post') {
+      register(config, req, res);
+    } else {
+      res.statusCode = 405;
+      res.end();
+    }
+  }
+
+  function registerPhpRoute() {
+    if(req.method.toLowerCase() == 'post') {
+      registerLegacy(config, req, res);
+    } else {
+      res.statusCode = 405;
+      res.end();
+    }
+  }
+
+  function healthRoute() {
+    if(req.method.toLowerCase() == 'get') {
+      info = health(req.connections);
+      res.end(JSON.stringify(info));
+    } else {
+      res.statusCode = 405;
+      res.end();
+    }
+  }
+
+  function healthTxtRoute() {
+    if(req.method.toLowerCase() == 'get') {
+      checkHealth(req, res);
+    } else {
+      res.statusCode = 405;
+      res.end();
+    }
+  }
+}
+```
 
 **Note**: I am nesting the small functions instead of locating them outside of the router function so I can avoid passing the arguments to each one. Don't you agree that Javascript clojures are awesome?!
 
