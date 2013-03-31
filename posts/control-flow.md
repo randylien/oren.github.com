@@ -6,10 +6,9 @@ I like to minimize the usage of abstractions in my node code. Whether it's web f
 I just wrote a little module that is part of an rss reader I am working on. All it's doing is inserting urls to my DB based on some simple logic.  
 Here are two versions of this moudule. One with [async](https://github.com/caolan/async#parallel) (control flow library) and the other one without it.
 
-This part is shared for both versions:
+This part is sharor both versions:
 
 ```js
-"use strict";
 
 // add articles to unread set if they don't exist
 //
@@ -17,32 +16,7 @@ This part is shared for both versions:
 // returns: callbackunread with array of unread articles
 //
 // usage:
-// var add = require('./addArticles.js');
-// 
-// var articles = [
-//   'http://substack.net/how_I_write_modules',
-//   'http://substack.net/many_things'
-// ];
-// 
-// add('http://substack.net/blog.xml', articles, function(err, unread) {
-//   if (err) {
-//     console.log('error', err);
-//   } else {
-//     console.log('success', unread);
-//   }
-// });
-// 
-// => unread articles: [ 'http://substack.net/how_I_write_modules' ]
-
-// npm packages
-var redis = require("redis");
-var client = redis.createClient();
-
-client.on("error", function (err) {
-  console.log("Error in Redis: " + err);
-});
-```
-
+/
 With async
 
 ```js
