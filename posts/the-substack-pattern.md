@@ -1,3 +1,5 @@
+## The Substack Pattern - a module should only do one thing
+
 db/index.js
 
 ```js
