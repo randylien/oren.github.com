@@ -1,4 +1,4 @@
-## Different ways to server a website with Node
+## Different ways to serve a website with Node
 
 ![cat](http://img.thesun.co.uk/multimedia/archive/01690/134480338496_1690194a.gif)
 
