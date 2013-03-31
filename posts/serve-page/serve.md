@@ -2,7 +2,7 @@
 
 ![cat](http://img.thesun.co.uk/multimedia/archive/01690/134480338496_1690194a.gif)
 
-Sometimes I need a quick way to serve a simple website.
+Sometimes I need a quick way to serve a simple website.  
 Here are 3 way you can do that with node.
 
 1. Hardcoding the file's content
