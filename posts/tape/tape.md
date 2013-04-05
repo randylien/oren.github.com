@@ -1,4 +1,4 @@
-## Client and Server tests looks the same with the Tape!
+## Client and Server tests looks the same with the Tape and Browserify
 
 ![tape](https://a248.e.akamai.net/camo.github.com/50dd49050de38c87a28ab6aa0b09bbe2d042cba1/687474703a2f2f737562737461636b2e6e65742f696d616765732f746170655f64726976652e706e67)
 
