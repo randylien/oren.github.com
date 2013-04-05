@@ -19,12 +19,11 @@ This is the directory structure of our sample website:
     │   └── test-saveUser.js     // tape test
     └── watch-browserify.js      // watching app.js and output app.min.js
 
-First we need to use CommonJS in the browser. we'll do it by installing [browserify](https://github.com/substack/node-browserify).  
-Read about it [here](https://github.com/oren/oren.github.com/blob/master/posts/browserify.md) if you have never heard about it.
-
+First we need to use CommonJS in the browser. we'll do it by installing [browserify](https://github.com/substack/node-browserify). Read about it [here](https://github.com/oren/oren.github.com/blob/master/posts/browserify.md) if you have never heard about it.  
 Second we need to install [tape](https://github.com/substack/tape). 
 
-Lets write a function for saving users. in the real app it might make an http call to our http endpoint that will take care of it. for now we'll just use setTimeout to mock that async call.  
+Lets write a function for saving users. in the real app it might make an http call to our http endpoint that will take care of it. For now we'll just use setTimeout to mock that async call.
+ 
 saveUser.js:
 
 ```js
@@ -52,7 +51,7 @@ test('save user', function (t) {
 });
 ```
 
-We run our test with `node test/*' and should see output similar to  this:
+We run our test with `node test/*` and should see output similar to  this:
 
     # save user
     ok 1 should be equal
