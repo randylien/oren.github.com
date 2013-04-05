@@ -19,10 +19,10 @@ Let's dive right in. Here is an example of adding 2 blog posts and reading all t
 var levelup = require('levelup')
 var db = levelup('./mydb')
 
-db.put('post!' + Date.now(), {author: 'josh', date: 'today'}, {encoding:'json'}, function (err) {
+db.put('post!' + Date.now(), {author: 'josh', title: 'angularJS', content: '<p> bla bla bla </p>'}, {encoding:'json'}, function (err) {
   if (err) return console.log('Ooops!', err) // some kind of I/O error
 
-  db.put('post!' + Date.now(), {author: 'jake', date: 'today'}, {encoding:'json'}, function (err) {
+  db.put('post!' + Date.now(), {author: 'jake', title: 'Responsive Design', content: '<p> blu blu blu </p>'}, {encoding:'json'}, function (err) {
     if (err) return console.log('Ooops!', err) // some kind of I/O error
 
     // to get a stream of all posts in reverse chronological order
