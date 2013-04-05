@@ -6,7 +6,7 @@
 LevelDB is a very fast and lightweight embedded database. It was created by two Google engineers and is inpired by BigTable, Google's proprietary file system. You are probably using it without knowing it since it's part of the Chrome browser. It's exposed as [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB) and used for web apps that need to work offline by saving data inside the user's browser.
 
 Other databases in the embedded category are BerkelyDB and SQLite (it's important to point out the LevelDB is faster).
-By embedded it means you don't run it as one of the popular databases you are used to such as mysql, mongodb or redis.
+By embedded it means you don't run it as one of the popular databases you are used to such as MySQL, MongoDB or Redis.
 LevelDB is contained within your application process and can't be accessed from other process.
 It is literally just a file based store of key value pairs that does some fancy caching and compression.
 
