@@ -1,9 +1,23 @@
-## Tape - test your client and the server with the same tool
+## Client and Server tests looks the same with the Tape!
 
 ![tape](https://a248.e.akamai.net/camo.github.com/50dd49050de38c87a28ab6aa0b09bbe2d042cba1/687474703a2f2f737562737461636b2e6e65742f696d616765732f746170655f64726976652e706e67)
 
 I like substack's module, tape for testing both the client and the server.
 I would like to demonstrate how to apply tape for client-side javascript.
+
+If you want to jump into the code just run the [example website](https://github.com/oren/oren.github.com/tree/master/posts/tape/website).  
+Install the dependencies with `npm install`, run `node watch-browserify` and open app.js, saveUser.js and test/test-saveUser.js.  
+This is the directory structure of our sample website:  
+
+    website
+    ├── app.js                   // requiring saveUser.js in this file
+    ├── app.min.js               // the output of browserify
+    ├── index.html               // <script src="app.min.js"></script> 
+    ├── package.json             // tape and browserify-watcher
+    ├── saveUser.js              // CommonJS module
+    ├── test
+    │   └── test-saveUser.js     // tape test
+    └── watch-browserify.js      // watching app.js and output app.min.js
 
 First we need to use CommonJS in the browser. we'll do it by installing [browserify](https://github.com/substack/node-browserify).  
 Read about it [here](https://github.com/oren/oren.github.com/blob/master/posts/browserify.md) if you have never heard about it.
@@ -46,3 +60,5 @@ We run our test with `node test/*' and should see output similar to  this:
     1..1
     # tests 1
     # pass  1
+
+Note - I didn't mention it but I use browserify-watcher to watch any changes in my js files and output app.min.js so i'll be able to use it in the html page - <script src="app.min.js"></script>. Look at [watch-browserify.js](https://github.com/oren/oren.github.com/blob/master/posts/tape/website/watch-browserify.js) to see how to use this module.
