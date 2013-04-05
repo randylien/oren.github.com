@@ -47,7 +47,7 @@ Notice that we never run a seperate process for our DB. All we did is requiring 
 It will create a folder called mydb with the database's content.
 The [API](https://github.com/rvagg/node-levelup#api) is very simple - put, get, del and a few streaming functions.
 
-The nice thing about using leveldb when used with node.js is that node can take you very far with only single a process. Leveldb is thread-safe which means that all the libuv threads that run in parallel in a typical node app will make reading and writing to leveldb very fast. In addition, reading is using streams which feels as if you are using a node core module - an indication that the author of levelup really knows what he is doing.
+The nice thing about using leveldb when used with node.js is that node can take you very far with only single a process. Leveldb is thread-safe which means that all the libuv threads that run in parallel in a typical node app will make reading and writing to leveldb very fast. In addition, you can use streams for reading or writing very fast, which feels as if you are using a node core module - an indication that the [author](https://github.com/rvagg) of LevelUp really knows what he is doing.
 
 ### Safety
 LevelUP is very safe. even if the node process crashed, as long as the write operation was sent to the file system it will make it.
@@ -61,14 +61,22 @@ The only time when writes can get lost is an OS crash. if that happens it might 
 
 ### Backup
 You got two options when it comes to backing up the data:  
-1. Close the db and copy the whole directory.   
-If you can't close, a copy should be ok still but there's a small risk you'll catch it in the middle of a compaction.  
-Even if you do catch it in a midway state then there's a repair() function you can use in levelup 0.7 - `levelup.repair(location, callback)`
 
-2. Open 2 dbs and stream the entire db into the other:
+1. Close the db and copy the whole directory.   If you can't close, a copy should be ok still but there's a small risk you'll catch it in the middle of a compaction.  Even if you do catch it in a midway state then there's a repair() function you can use in levelup 0.7 - `levelup.repair(location, callback)`
+
+1. Open 2 dbs and stream the entire db into the other:
 
 ```js
 function copy (srcdb, dstdb, callback) {
   srcdb.createReadStream().pipe(dstdb.createWriteStream()).on('close', callback)
 }
 ```
+
+### Resources
+
+* Podcast, Nodeup episode about LevelDB - http://nodeup.com/fortyone 
+* Blog, LevelDB Internals - http://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/
+* Slides, be the creator of LevelUp, [Rod Vagg](https://github.com/rvagg) - http://rvagg.github.com/presentations/nodejsdub/#/
+* An amazing GUI for LevelDB, built by [Paolo Fragomeni](https://github.com/hij1nx) - https://github.com/hij1nx/levelweb
+
+
