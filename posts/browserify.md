@@ -6,15 +6,19 @@ and you simply require the file you want to use:
 
 saveUser.js
 
-    module.exports = function(userId) {
-      // save user in DB
-      console.log('user' + userId + ' saved in DB');
-    };
+```js
+module.exports = function(userId) {
+  // save user in DB
+  console.log('user' + userId + ' saved in DB');
+};
+```
    
 app.js
 
+```js
     var foo = require('./saveUser.js');  # foo contains a function that can save our user
     foo(1);                              # calling our function with a user id
+```
 
 great for code reuse and easy to test, right? true, but how is that relevant to client-side js?  
 I am glad you asked. I use a tool called [browserify](https://github.com/substack/node-browserify) that let me use CommonJS in the browser!  
@@ -23,16 +27,18 @@ go ahead and create app.js and saveUser.js from the code samples above.
 
 now add a simple index.html that uses app.js
 
-    <!DOCTYPE html>
-      <head>
-      </head>
+```html
+<!DOCTYPE html>
+  <head>
+  </head>
 
-      <body>
-        <p>CommonJS in the browser!</p>
-       
-         <script src="app.js"></script>
-      </body>
-    </html>
+  <body>
+    <p>CommonJS in the browser!</p>
+   
+     <script src="app.js"></script>
+  </body>
+</html>
+```
 
 if you look at the browser's console you will notice an error: `Uncaught ReferenceError: require is not defined`   
 that makes sense, since require is not available for js client side. let's fix that with browserify.
@@ -54,16 +60,18 @@ that's nice but we need to save the output into a file, right? lets do that with
 
 now we can use bundle.js insted of app.js in our html file:
 
-    <!DOCTYPE html>
-      <head>
-      </head>
+```html
+<!DOCTYPE html>
+  <head>
+  </head>
 
-      <body>
-        <p>CommonJS in the browser!</p>
+  <body>
+    <p>CommonJS in the browser!</p>
 
-        <script src="app.min.js"></script>
-      </body>
-    </html>
+    <script src="app.min.js"></script>
+  </body>
+</html>
+```
 
 if you see "user saved in DB" in the browser's console, everything is fine.
 
