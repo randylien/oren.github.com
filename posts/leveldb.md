@@ -3,19 +3,27 @@
 ![@dominictarr](http://i.imgur.com/AxuKdQE.png)
 
 ### What is it?
-LevelDB is a very fast and lightweight embedded database. It was created by two Google engineers and is inpired by BigTable, Google's proprietary file system. You are probably using it without knowing it since it's part of the Chrome browser. It's exposed as [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB) and used for web apps that need to work offline by saving data inside the user's browser.
+LevelDB is a very fast and lightweight embedded database. It was created by two Google engineers and is inpired by BigTable, Google's proprietary file system. You are probably using it without knowing it since it's part of the Chrome browser (exposed as [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB)). 
 
 Other databases in the embedded category are BerkelyDB and SQLite (it's important to point out the LevelDB is faster).
-By embedded it means you don't run it as one of the popular databases you are used to such as MySQL, MongoDB or Redis.
-LevelDB is contained within your application process and can't be accessed from other process.
+By embedded it means you don't run it in a separate process as you would normally do with many of the popular databases such as MySQL, MongoDB or Redis. LevelDB is contained within your application process and can't be accessed from other process.
 It is literally just a file based store of key value pairs that does some fancy caching and compression.
 
-If we compare it to Redis, it's even lighter, have more reliable writes and unlike Redis, you don't store your data in memory. Redis have more data structures (sets, lists etc) that LevelDB is lacking.  The similarity is that both are key-value store and both can save json.
+If we compare it to Redis, it's even lighter, have more reliable writes and unlike Redis, you don't store your entire data in memory but in the file system. Another difference is Redis have more data structures (sets, lists etc) that LevelDB is lacking. The similarity is that both store key-value pairs and both can save json.
+
+### What situations is it good for?
+
+* Whenever you need easy way to persist data without worrying about RAM but with speed very close to memory access
+* Smartphones, Raspberry Pi or similar small device
+* Offline web apps - if you use LevelDB on the server you might be able to use the same code for the browser storage (IndexedDB)
+* Bulding block for a Database. LevelDB (or a variant) is used in BigTable, Hadoop’s HBase, Cassandra and Riak.
 
 ### Example
 Let's dive right in. Here is an example of adding 2 blog posts and reading all the db using streams:
 
 ```js
+// index.js
+
 var levelup = require('levelup')
 var db = levelup('./mydb')
 
@@ -43,11 +51,22 @@ db.put('post!' + Date.now(), {author: 'josh', title: 'angularJS', content: '<p> 
 });
 ```
 
-Notice that we never run a seperate process for our DB. All we did is requiring levelup (the most popular node packages for LevelDB) and calling the leveldb function with the location that we want our database to live.
-It will create a folder called mydb with the database's content.
-The [API](https://github.com/rvagg/node-levelup#api) is very simple - put, get, del and a few streaming functions.
+Runnning it with `node index.js` will output
 
-The nice thing about using leveldb when used with node.js is that node can take you very far with only single a process. Leveldb is thread-safe which means that all the libuv threads that run in parallel in a typical node app will make reading and writing to leveldb very fast. In addition, you can use streams for reading or writing very fast, which feels as if you are using a node core module - an indication that the [author](https://github.com/rvagg) of LevelUp really knows what he is doing.
+    post!1365218243987 = { author: 'jake', title: 'Responsive Design', content: '<p> blu blu blu </p>' }
+    post!1365218243982 = { author: 'josh', title: 'angularJS', content: '<p> bla bla bla </p>' }
+
+    Stream ended
+    Stream closed
+
+Notice the following:  
+
+* We never run a seperate process for our DB. All we did is requiring levelup (the most popular node packages for LevelDB) and called the leveldb function with the location that we want our database to live. It will create a folder called mydb with the database's content.
+* The [API](https://github.com/rvagg/node-levelup#api) is very simple - put, get, del and a few streaming functions.
+* In order to make sure our keys are unique we added Date.now(). For example, the first key is something like post!1365217603596. The exclamation mark is used to seperator.
+
+The nice thing about using leveldb when used with node.js is that node can take you very very far with only single a process. Leveldb is thread-safe which means that all the libuv threads that run in parallel in a typical node app will make reading and writing to leveldb extremely fast. In addition, you can use streams for reading or writing, which feels as if you are using a node core module - an indication that the [author](https://github.com/rvagg) of LevelUp really knows what he is doing.
+
 
 ### Safety
 LevelUP is very safe. even if the node process crashed, as long as the write operation was sent to the file system it will make it.
@@ -74,10 +93,8 @@ function copy (srcdb, dstdb, callback) {
 
 ### Resources
 
-* Podcast, Nodeup episode about LevelDB - http://nodeup.com/fortyone 
-* Blog, LevelDB Internals - http://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/
-* Slides, be the creator of LevelUp, [Rod Vagg](https://github.com/rvagg) - http://rvagg.github.com/presentations/nodejsdub/#/
-* An amazing GUI for LevelDB, built by [Paolo Fragomeni](https://github.com/hij1nx) - https://github.com/hij1nx/levelweb
-* Chat room on freedone - ##leveldb
-
-
+* Podcast episode about LevelDB - http://nodeup.com/fortyone 
+* Blog post about LevelDB Internals - http://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/
+* Slides by the creator of LevelUp - [Rod Vagg](https://github.com/rvagg) - http://rvagg.github.com/presentations/nodejsdub/#/
+* GUI for LevelDB, built by [Paolo Fragomeni](https://github.com/hij1nx) - https://github.com/hij1nx/levelweb
+* Chat room on freenode - [##leveldb](http://webchat.freenode.net/?channels=##leveldb)
