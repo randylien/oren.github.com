@@ -40,7 +40,7 @@ module.exports = function(user, cb) {
 };
 ```
 
-If we want this code to run we need to use browserify. Read about it [here](https://github.com/substack/node-browserify) if you don't know what browserify is.
+If we want this code to run we need to use browserify. Read about it [here](https://github.com/oren/oren.github.com/blob/master/posts/browserify.md) if you don't know what browserify is.
 install it - `npm install browserify -g` and run `browserify app.js > app.min.js`
 
 
