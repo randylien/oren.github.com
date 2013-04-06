@@ -1,2 +1,2 @@
-var foo = require('./saveUser.js');
-foo({name: 'rose'});
+var saveUser = require('./saveUser.js');
+saveUser({name: 'rose'});

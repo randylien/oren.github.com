@@ -50,7 +50,7 @@ lets see what happend when we give it one argument, our js file:
 we see a long javascript code printed in the console. browserify did it's magic and wrap our file so it will be able to use our require function.  
 that's nice but we need to save the output into a file, right? lets do that with -o
 
-    browserify app.js -o bundle.js
+    browserify app.js > app.min.js
 
 now we can use bundle.js insted of app.js in our html file:
 
@@ -61,15 +61,24 @@ now we can use bundle.js insted of app.js in our html file:
       <body>
         <p>CommonJS in the browser!</p>
 
-        <script src="bundle.js"></script>
+        <script src="app.min.js"></script>
       </body>
     </html>
 
 if you see "user saved in DB" in the browser's console, everything is fine.
 
-that's cool but I'm not going do this browserify dance every time I make a change to my js.  
-right, that's why you can use -w to watch for changes and generate the bundle file:
+That's cool but I'm not going do this browserify dance every time I make a change to my js.  
+There is a simple npm package called browserify-watcher that will run browserify on any change of my js files.  
+Install it with `npm install browserify-watcher` and create this file:
 
-    browserify app.js -o bundle.js -w
+```js
+// watch.js
+
+require('browserify-watcher')(
+  './app.js' // bundles to `app.min.js`
+)
+```
+
+Run it with `node watch.js` and you're done - when you change app.js, app.min.js will be generated.
 
 that's it, you can leave the spaghetti for the kitchen and enjoy mess-free js code.
