@@ -78,6 +78,6 @@ function copy (srcdb, dstdb, callback) {
 * Blog, LevelDB Internals - http://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/
 * Slides, be the creator of LevelUp, [Rod Vagg](https://github.com/rvagg) - http://rvagg.github.com/presentations/nodejsdub/#/
 * An amazing GUI for LevelDB, built by [Paolo Fragomeni](https://github.com/hij1nx) - https://github.com/hij1nx/levelweb
-* chatroom on freedone - ##leveldb
+* Chat room on freedone - ##leveldb
 
 
