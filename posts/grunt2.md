@@ -26,7 +26,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-stylus');
 
 };
-```js
+```
 
 Copy paste this file - main.styl
 
