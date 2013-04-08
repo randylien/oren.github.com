@@ -1,3 +1,5 @@
+## Grunt in 20 seconds
+
 Lets't start from the end - let's see a real example of grunt.
 I'll show you how in 20 seconds you'll be able to run `grunt stylus` to convert my main.styl file to main.css.  
 Even that's not what you care about, it will give you a starting point, where you can remove it or extend this example with your own stuff (minify js, linting, tests, etc).
@@ -38,7 +40,7 @@ body, html
   line-height 1.9em
 ```
 
-Run `grunt stylus'  
-A file named main.css was created. Good job. now move on and read the rest of the guide!
+Run `grunt stylus`  
+A file named main.css was created. Good job. now move on and read the rest of the guide so you'll actually understand what you just did!
 
 http://gruntjs.com/getting-started
